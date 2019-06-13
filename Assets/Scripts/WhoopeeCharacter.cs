@@ -5,6 +5,7 @@ using UnityEngine;
 public class WhoopeeCharacter : MonoBehaviour
 {
     private Rigidbody2D body;
+    [SerializeField] private float rotateSpeed = 2.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,6 @@ public class WhoopeeCharacter : MonoBehaviour
 
     public void Rotate(float value)
     {
-        transform.Rotate(0.0f, 0.0f, value);
+        transform.Rotate(0.0f, 0.0f, value * rotateSpeed);
     }
 }
