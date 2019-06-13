@@ -15,4 +15,10 @@ public class WhoopeeCharacter : MonoBehaviour
     {
         
     }
+
+    public void Move()
+    {
+        
+       
+    }
 }
