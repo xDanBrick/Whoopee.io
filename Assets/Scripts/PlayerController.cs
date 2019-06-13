@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+    [SerializeField] int controllerNumber = 0;
     private WhoopeeCharacter character;
     private float horizontal;
 
@@ -22,7 +22,10 @@ public class PlayerController : MonoBehaviour
 
         character.Rotate(-horizontal);
 
-        Debug.Log(horizontal);
+        if(Input.GetButtonDown("Fire1"))
+        {
+            //character.Go();
+        }
     }
 
 }
