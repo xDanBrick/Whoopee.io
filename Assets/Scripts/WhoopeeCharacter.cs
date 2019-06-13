@@ -5,6 +5,7 @@ using UnityEngine;
 public class WhoopeeCharacter : MonoBehaviour
 {
     private Rigidbody2D body;
+
     // Start is called before the first frame update
     void Start()
     {

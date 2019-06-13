@@ -20,8 +20,9 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Triggers1");
 
-        //character.Rotate(horizontal);
+        character.Rotate(horizontal);
 
         Debug.Log(horizontal);
     }
+
 }
