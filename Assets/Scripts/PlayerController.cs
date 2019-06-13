@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] int controllerNumber = 0;
+    [SerializeField] int controllerNumber = 1;
     private WhoopeeCharacter character;
     private float horizontal;
 
@@ -18,14 +18,23 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Triggers1");
+        horizontal = Input.GetAxis("Triggers" + controllerNumber.ToString());
 
         character.Rotate(-horizontal);
 
-        if(Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("SpeedUp" + controllerNumber.ToString()))
         {
-            //character.Go();
+            character.SetState(State.DEFLATE);
         }
+        else if (Input.GetButton("Inflate" + controllerNumber.ToString()))
+        {
+            character.SetState(State.INFLATE);
+        }
+        else
+        {
+            character.SetState(State.NONE);
+        }
+        
     }
 
 }
