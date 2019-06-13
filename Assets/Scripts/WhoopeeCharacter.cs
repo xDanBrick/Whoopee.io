@@ -21,4 +21,10 @@ public class WhoopeeCharacter : MonoBehaviour
     {
         transform.Rotate(0.0f, 0.0f, value);
     }
+
+    public void Move()
+    {
+        
+       
+    }
 }
