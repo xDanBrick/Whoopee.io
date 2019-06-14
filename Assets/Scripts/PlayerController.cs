@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] int controllerNumber = 1;
+    [SerializeField] public int controllerNumber = 1;
     private WhoopeeCharacter character;
     private float horizontal;
 
@@ -35,6 +35,10 @@ public class PlayerController : MonoBehaviour
             character.SetState(State.NONE);
         }
         
+        if(Input.GetButtonDown("Inflate" + controllerNumber.ToString()))
+        {
+            character.PlayInflateSound();
+        }
     }
 
 }
